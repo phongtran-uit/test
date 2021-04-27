@@ -1,7 +1,7 @@
 let constraintObj = {
   audio: true,
   video: {
-    facingMode: "environment",
+    facingMode: "user",
     width: { min: 640, ideal: 1280, max: 1920 },
     height: { min: 480, ideal: 720, max: 1080 },
   },
@@ -106,6 +106,7 @@ navigator.mediaDevices
     };
   })
   .catch(function (err) {
+    alert("error", err.message);
     console.log(err.name, err.message);
   });
 
